@@ -73,28 +73,28 @@ ABCD
 
 n = 7 # Number of rows
 
-for i in range(n):
-    if(i==0 or i==6):
-        print(7*"*",end="")
+# for i in range(n):
+#     if(i==0 or i==6):
+#         print(7*"*",end="")
     
-    elif(i==1 or i==5):
-        print(3*"*",end='')
-        print(1*" ",end='')
-        print(3*"*",end='')
+#     elif(i==1 or i==5):
+#         print(3*"*",end='')
+#         print(1*" ",end='')
+#         print(3*"*",end='')
     
-    elif(i==3):
-        print("*",end='')
-        print(5*" ",end='')
-        print("*",end='')
-    elif(i==4 or i==2):
-        print(2*"*",end='')
-        print(3*" ",end='')
-        print(2*"*",end='')
+#     elif(i==3):
+#         print("*",end='')
+#         print(5*" ",end='')
+#         print("*",end='')
+#     elif(i==4 or i==2):
+#         print(2*"*",end='')
+#         print(3*" ",end='')
+#         print(2*"*",end='')
 
 
 
 
-    print()        
+#     print()        
 
 
 '''
@@ -104,19 +104,27 @@ for i in range(n):
 *******
 '''
 
-for i in range(1,n+1):
-    for j in range(n-i):
-        print(" ",end='')
-    for z in range(1,2*i):
-        print("*",end="")
+# for i in range(1,n+1):
+#     for j in range(n-i):
+#         print(" ",end='')
+#     for z in range(1,2*i):
+#         print("*",end="")
 
-    print()
+#     print()
 
 '''
     1
-   12
-  123
- 1234
-12345
+   12 1
+  123 21
+ 1234 321
+12345 4321
 
 '''
+for i in range(1,n+1):
+    for j in range(0,n-i):
+        print(" ",end="")
+    for z in range(1,i+1):
+        print(z,end="")
+    for p in range(z-1,0,-1):
+        print(p,end="")
+    print()
