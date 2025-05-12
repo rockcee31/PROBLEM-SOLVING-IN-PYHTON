@@ -35,3 +35,6 @@ while(start<=end):
         end = mid-1 
 
 print(index)
+
+
+# solved book allocation problem today 
